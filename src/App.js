@@ -20,6 +20,8 @@ import Nav from 'react-bootstrap/Nav';
 import Header from './components/header'
 import Content from './components/content'
 import Footer from './components/footer';
+import Read from './components/read';
+import Create from './components/create';
 
 // App class - extends Component Class
 class App extends Component {
@@ -36,8 +38,8 @@ class App extends Component {
               <Nav className="me-auto">
                 {/* Link to specified component */}
                 <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/footer">Footer</Nav.Link>
-                <Nav.Link href="/header">Header</Nav.Link>
+                <Nav.Link href="/read">Read</Nav.Link>
+                <Nav.Link href="/create">Create</Nav.Link>
               </Nav>
             </Container>
           </Navbar>
@@ -45,8 +47,8 @@ class App extends Component {
           {/* Switches between the local components */}
           <Switch>
             <Route path="/" exact><Content /></Route>
-            <Route path="/header" ><Header /></Route>
-            <Route path="/footer" ><Footer /></Route>
+            <Route path="/create" ><Create /></Route>
+            <Route path="/read" ><Read /></Route>
           </Switch>
         </div>
       </Router>
