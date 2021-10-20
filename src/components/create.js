@@ -9,7 +9,7 @@ class Create extends Component {
         // Calls Components constructor
         super();
 
-        // Bind
+        // Bind - When invoked call local instances
         this.handleSubmit = this.handleSubmit.bind(this);
         this.onChangeMovieName = this.onChangeMovieName.bind(this);
         this.onChangeMovieYear = this.onChangeMovieYear.bind(this);
