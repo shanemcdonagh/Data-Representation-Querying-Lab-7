@@ -1,6 +1,6 @@
 // Imports
 import Read, { Component } from 'react';
-import MovieItem from './moveitem';
+import MovieItem from './movieitem';
 
 // Class Movie - extends Component class
 class Movies extends Component {

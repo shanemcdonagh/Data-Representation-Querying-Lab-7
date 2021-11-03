@@ -1,6 +1,9 @@
 // Imports
 import React, { Component } from 'react';
 
+// HTTP client
+import axios from 'axios';
+
 // Class Create - extends Component class
 class Create extends Component {
 
@@ -23,7 +26,7 @@ class Create extends Component {
         }
     }
 
-    // Method - Called when user presses "Add Movie" button
+    // Method - Called when user presses "Add Movie" button (Wants to add new movie)
     handleSubmit(event) {
 
         // Displays values in a pop-up window
@@ -31,6 +34,22 @@ class Create extends Component {
         + " Movie Year: " + this.state.Year 
         + " Movie Poster: " + this.state.Poster);
 
+        // Create object based on user-entered values
+        const NewMovie = {
+            Title: this.state.Title,
+            Year: this.state.Year,
+            Poster: this.state.Poster
+        }
+        
+        // Post the object to the specified url (sends data to server)
+        axios.post('http://localhost:4000/api/movies',NewMovie)
+        .then((response)=>{
+            console.log(response);
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+        
         // Prevents page from refreshing
         event.preventDefault();
 

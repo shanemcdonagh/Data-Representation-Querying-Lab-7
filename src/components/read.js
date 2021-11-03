@@ -8,11 +8,11 @@ class Read extends Component {
 
     // Method - Method gets called whenever component becomes visible (inserted into DOM)
     componentDidMount(){
-        // Retrieve data from url and...
-        axios.get("https://jsonblob.com/api/jsonblob/894944504570986496")
+        // Retrieve data from this url and...
+        axios.get("http://localhost:4000/api/movies")
         .then((response)=>{
             // pass it to the movies array
-            this.setState({myMovies:response.data.movies})
+            this.setState({myMovies:response.data.mymovies})
         })
         .catch((error)=>{
             // Else, output error to console
@@ -25,9 +25,6 @@ class Read extends Component {
         myMovies: []
     };
 
-    
-   
-   
     // Method - Visual aspect of component
     render() {
 
