@@ -11,12 +11,12 @@ class Movieitem extends Component {
             <div>
                 {/* Displays data that was passed from Movies component in a Card */}
                 <Card>
-                    <Card.Header>{this.props.myfilm.Title}</Card.Header>
+                    <Card.Header>{this.props.myfilm.title}</Card.Header>
                     <Card.Body>
                         <blockquote>
-                            <img src={this.props.myfilm.Poster}></img>
+                            <img src={this.props.myfilm.poster}></img>
                             <footer>
-                                {this.props.myfilm.Year}
+                                {this.props.myfilm.year}
                             </footer>
                         </blockquote>
                     </Card.Body>
