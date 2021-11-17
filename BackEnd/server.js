@@ -49,7 +49,7 @@ app.get('/', (req, res) => {
 
 // Server listening through port 4000 - Accessed by localhost:3000 (our app)
 app.listen(port, (req, res) => {
-    console.log('Listening at http://localhost:',port);
+    console.log(`Listening at http://localhost${port}`);
 });
 
 // Returns movie based on its id
