@@ -81,13 +81,13 @@ app.post('/api/movies', (req, res) => {
     res.send("Item Added");
 });
 
-  // Finds all the data within the collection
-  movieModel.find((err, data)=> {
-    res.json(data);
-})
-
 //Listening through path with get method
 app.get('/api/movies', (req, res) => {
+     // Finds all the data within the collection
+     movieModel.find((err, data)=> {
+        res.json(data);
+     })
+  
     // Create array of movies
     // const movies = [
     //     {
